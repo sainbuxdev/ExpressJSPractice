@@ -15,11 +15,13 @@ const PORT = process.env.PORT || 3000;
 // Allowing all origins to make a request to this beckend
 app.use(
   cors({
-    origin: "*", // Consider specifying actual origins for better security
+    origin: "http://localhost:3000", // Consider specifying actual origins for better security
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
   })
 );
+
+app.use(cors());
 
 // for hanlding urlencoded data, means form data
 app.use(express.urlencoded({ extended: false }));
