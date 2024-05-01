@@ -22,7 +22,7 @@ app.use(
 );
 
 app.use(cors());
-
+app.use("/videos", express.static("videos"));
 // for hanlding urlencoded data, means form data
 app.use(express.urlencoded({ extended: false }));
 // for handling json data submission
